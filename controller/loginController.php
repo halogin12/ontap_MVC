@@ -7,6 +7,7 @@ class loginController extends loginModel
     function __construct()
     {
         $this->login = new loginModel();
+        
     }
     function logincontrol()
     {
@@ -24,7 +25,7 @@ class loginController extends loginModel
                     $inputPassword = $_POST['inputPassword'];
                     if ($this->login->login($inputName,$inputPassword)) {			
                         
-                        header('Location: http://localhost/ontap/admin/index.php');
+                        header('Location: http://localhost/ontap_MVC/admin/index.php');
                     } else {
                         $message = "Thông tin đăng nhập chưa đúng";
                         echo "<script type='text/javascript'>alert('$message');</script>";
@@ -41,4 +42,7 @@ class loginController extends loginModel
                 break;
         }
     }
+
+  
+
 }

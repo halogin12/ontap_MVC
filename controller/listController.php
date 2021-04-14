@@ -3,23 +3,23 @@ include_once 'model/listModel.php';
 
 class listController extends listModel
 {
-    private $nhanvien;
+    private $list;
 
     function __construct() 
     {
-        $this->nhanvien = new listModel();
+        $this->list = new listModel();
     }
 
-    function list()
+    function listControl()
     {
         if(isset($_GET['method'])){
             $method = $_GET['method'];
         }else{
-            $method = 'list';
+            $method = 'index';
         }
         switch($method){
-            case 'list':
-                $result = $this->nhanvien->list();
+            case 'index':
+                $result = $this->list->list();
                 include_once "view/list.php";
                 break;
 

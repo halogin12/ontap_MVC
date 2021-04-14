@@ -7,7 +7,7 @@ class listModel extends Connect
     {
         parent::__construct();
     }
-    public function list()
+     function list()
     {
         $result = array();
         $sql = "SELECT * FROM nhanvien ";
