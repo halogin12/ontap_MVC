@@ -12,6 +12,7 @@
                 <th scope="col">Email: </th>
                 <th scope="col">Số điện thoại: </th>
                 <th scope="col">Địa chỉ: </th>
+                    
             </tr>
         </thead>
         <tbody>
