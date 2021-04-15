@@ -1,5 +1,5 @@
 <?php 
-include_once 'model/listModel.php';
+include_once '../model/listModel.php';
 
 class listController extends listModel
 {
@@ -20,7 +20,7 @@ class listController extends listModel
         switch($method){
             case 'index':
                 $result = $this->list->list();
-                include_once "view/list.php";
+                include_once "../view/list.php";
                 break;
 
             default:

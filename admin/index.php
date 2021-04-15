@@ -1,6 +1,6 @@
 <?php   
     include_once "../config/myconnect.php";
-
+    
         if (isset($_GET['page'])) {
             $page = $_GET['page'];
         }else{
