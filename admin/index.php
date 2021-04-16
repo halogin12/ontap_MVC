@@ -1,4 +1,8 @@
-<?php   
+
+
+  <?php   
+    include_once "../config/myconnect.php";
+    include_once "../layout/header.php";  
 
         if (isset($_GET['page'])) {
             $page = $_GET['page'];
@@ -10,7 +14,7 @@
             case 'list':
                 include_once '../controller/listController.php';
                 $nhanvien = new listController();
-                $nhanvien->list();
+                $nhanvien->listControl();
                 break;
 
             
@@ -20,3 +24,6 @@
         }
 
     ?>
+
+ 
+<?php include_once "../layout/footer.php";?>

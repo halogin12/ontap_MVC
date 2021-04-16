@@ -19,5 +19,6 @@ class loginModel extends Connect
 		return $pre->fetchAll(PDO::FETCH_ASSOC);
     }
 
+ 
   
 }
