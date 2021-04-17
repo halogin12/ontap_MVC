@@ -11,7 +11,7 @@
             <div class="form-group row">
                 <label for="inputPass" class="col-sm-1-12 col-form-label">Email</label>
                 <div class="col-sm-1-12">
-                    <input type="password" class="form-control" name="inputemail" id="inputEmail" placeholder="">
+                    <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="">
                 </div>
             </div>
 
@@ -23,7 +23,12 @@
             </div>
             <div class="form-group row">
                 <div class="offset-sm-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    <button type="submit" name="button_registerr" class="btn btn-primary">Đăng ký</button>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                    <button type="submit" name="button_login" class="btn btn-primary">Đăng nhập</button>
                 </div>
             </div>
         </form>

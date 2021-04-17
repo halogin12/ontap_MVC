@@ -32,4 +32,12 @@ class createModel extends Connect
         $pre->execute();
         return $pre->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    function success()
+    {
+        $message = "đăng lí thành công";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+        //header('Location: index.php');
+        //confirm('Bạn có chắc chắn muốn xóa học viên?');
+    }
 }

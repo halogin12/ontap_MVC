@@ -18,24 +18,29 @@ class createController extends createModel
         }
         switch ($method) {
             case 'register':
-                if(isset($_POST['register'])){
+                if(isset($_POST['button_registerr'])){
                     
-                    $inputName = $_POST['name'];
-                    $inputEmail = $_POST['email'];
-                    $inputPassword = $_POST['password'];
+                    $inputName = $_POST['inputName'];
+                    $inputEmail = $_POST['inputEmail'];
+                    $inputPassword = $_POST['inputPassword'];
                     if($this->login->checkname($inputName)){
                         // $message = "the same student code";
                         // echo "<script type='text/javascript'>alert('$message');</script>";
                         $error =$this->login->error();
                     }else{
                         $add = $this->login->add($inputName,$inputEmail,$inputPassword);
-                        header('Location: index.php');
+                        $success = $this->login->success();
                     }
                     
+                }
+                else if(isset($_POST['button_login'])){
+                    header('Location: index.php');
                 }
 
                 include_once 'view/register.php';
                 break;
+
+            
                 default:
                 # code...
                 break;
