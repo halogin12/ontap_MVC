@@ -1,18 +1,20 @@
 
 <div class="container">
     
-        <form class="navbar-left navbar-form nav-search mr-md-3" action="">
-			<div class="input-group">
-				<input type="text" placeholder="Search ..." class="form-control">
-				<div class="input-group-append">
-					<span class="input-group-text">
-						<i class="la la-search search-icon"></i>
-					</span>
-				</div>
-			</div>
-		</form>
-
     <form action="">
+        <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon">Nhập từ khóa</div>
+                            <input type="text" name="key" class="form-control" id="" placeholder="" />
+                        </div>
+                    </div>
+                    <button type="submit" name="search" class="btn">Tìm kiếm</button>
+                </form>
+                <div class="text-right">
+                    <a href="index.php?page=list&method=add" class="btn btn-success">
+                        Thêm
+                    </a>
+                </div>
         <table class="table table-head-bg-success table-striped table-hover">
             <thead>
                 <tr>
@@ -46,7 +48,7 @@
                         </td>
 
                         <td>
-                            <a href="index.php?page=list&method=destroy&id=<?php echo $value['id']; ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa học viên?');" class="btn btn-danger">
+                            <a href="index.php?page=list&method=update&id=<?php echo $value['id']; ?>" class="btn btn-danger">
                                 Sửa
                             </a>
                             <!-- onclick="return confirm('Bạn có chắc chắn muốn xóa học viên?');" -->

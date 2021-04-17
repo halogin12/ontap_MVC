@@ -34,15 +34,35 @@ class loginController extends loginModel
                 include_once 'view/login.php';
                 break; 
 
-            // case 'create':
-            //     include_once '../view/insert.php';
+            // case 'register':
+            //     if(isset($_POST['register'])){
+                   
+            //         $name = $_POST['name'];
+                    
+            //         $email = $_POST['email'];
+            //         $password = $_POST['password'];
+            //         if($this->login->checkname($name)){
+            //             // $message = "the same student code";
+            //             // echo "<script type='text/javascript'>alert('$message');</script>";
+            //             $error =$this->login->error();
+            //         }else{
+            //             $add = $this->login->add($name,$email,$password);
+            //             header('Location: index.php');
+            //         }
+                    
+            //     }
+
+            //     include_once 'view/register.php';
             //     break; 
+            
+             break;
             default:
                 # code...
                 break;
         }
     }
 
-  
+
+    
 
 }

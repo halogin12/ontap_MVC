@@ -1,24 +1,12 @@
 <?php
 
 
-class loginModel extends Connect
+class createModel extends Connect
 {
     function __construct()
     {
         parent::__construct();
     }
-    function login($inputName, $inputPassword)
-    {
-    
-        $sql = "SELECT * FROM login WHERE name =:inputName AND  password =:inputPassword";
-      
-        $pre = $this->pdo->prepare($sql);
-        $pre->bindParam(":inputName", $inputName);
-        $pre->bindParam(":inputPassword", $inputPassword); 
-		$pre->execute();
-		return $pre->fetchAll(PDO::FETCH_ASSOC);
-    }
-
     function add($inputName,$inputEmail,$inputPassword)
     {
         $sql = "INSERT INTO login(name,email,password) VALUES (:inputName,:inputEmail,:inputPassword)";
@@ -44,5 +32,4 @@ class loginModel extends Connect
         $pre->execute();
         return $pre->fetchAll(PDO::FETCH_ASSOC);
     }
-  
 }

@@ -30,6 +30,48 @@ class listController extends listModel
                 }
                header('Location: index.php');
                 break;
+
+            case 'update':
+                if (isset($_GET['id'])) {
+                    $id = (int)$_GET['id'];
+                    $result = $this->list->showlist($id);
+                   // $result1 = $this->list->indexhang();
+                    if(isset($_POST['update'])){
+                        $name = $_POST['name'];
+                        $phone = $_POST['phone'];
+                        $email = $_POST['email'];
+                        $addres = $_POST['addres'];
+                        $update = $this->list->update($id,$name,$phone,$email,$addres);
+                        header('Location: index.php');
+                     
+                    }
+                }
+                include_once '../view/edit.php';
+                break;
+
+                case 'add':
+                
+                   // $result = $this->list->list();
+                    if(isset($_POST['add'])){
+                        $id = $_POST['id'];
+                        $name = $_POST['name'];
+                        $phone = $_POST['phone'];
+                        $email = $_POST['email'];
+                        $addres = $_POST['addres'];
+
+                        if($this->list->checkid($id)){
+                            // $message = "the same student code";
+                            // echo "<script type='text/javascript'>alert('$message');</script>";
+                            $error =$this->list->error();
+                        }else{
+                            $add = $this->list->add($id,$name,$phone,$email,$addres);
+                            header('Location: index.php');
+                        }
+                        
+                    }
+
+                include_once '../view/add.php';
+                break;
             default:
             break;
         }

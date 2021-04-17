@@ -19,11 +19,13 @@
             <div class="form-group row">
                 <div class="offset-sm-2 col-sm-10">
                     <button type="submit" id="login" name="login" value="login" class="btn btn-primary">Đăng nhập</button>
+                   
                     <span>Nếu bạn chưa có tài khoản? <a href="index.php?page=register" style="color: red;">Đăng ký</a></span>
-                    <a href="index.php?page=list" style="color: red;">líst</a>
+                    
                 </div>
             </div>
         </form>
+        
     </div>
 </div>
 

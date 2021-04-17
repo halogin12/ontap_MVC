@@ -16,6 +16,8 @@
                 $nhanvien = new listController();
                 $nhanvien->listControl();
                 break;
+            
+            
 
             
             default:

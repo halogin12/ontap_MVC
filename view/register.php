@@ -1,12 +1,20 @@
 <div class="container">
     <div class="container">
-        <form>
+        <form method="post" action="">
             <div class="form-group row">
                 <label for="inputName" class="col-sm-1-12 col-form-label">Tên đăng nhập</label>
                 <div class="col-sm-1-12">
                     <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
                 </div>
             </div>
+
+            <div class="form-group row">
+                <label for="inputPass" class="col-sm-1-12 col-form-label">Email</label>
+                <div class="col-sm-1-12">
+                    <input type="password" class="form-control" name="inputemail" id="inputEmail" placeholder="">
+                </div>
+            </div>
+
             <div class="form-group row">
                 <label for="inputPass" class="col-sm-1-12 col-form-label">Password</label>
                 <div class="col-sm-1-12">
