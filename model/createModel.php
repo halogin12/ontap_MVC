@@ -37,7 +37,7 @@ class createModel extends Connect
     {
         $message = "đăng lí thành công";
         echo "<script type='text/javascript'>alert('$message');</script>";
-        //header('Location: index.php');
+        
         //confirm('Bạn có chắc chắn muốn xóa học viên?');
     }
 }
