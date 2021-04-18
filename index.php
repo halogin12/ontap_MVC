@@ -12,8 +12,8 @@
 
         switch ($page) {
             case 'register':
-                include_once 'controller/createController.php';
-                $create = new createController();
+                include_once 'controller/loginController.php';
+                $create = new loginController();
                 $create->createcontrol();
                 break;
 
