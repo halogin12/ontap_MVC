@@ -40,6 +40,7 @@
                         <td><?php echo $value['phone'];?></td>
                         <td><?php echo $value['email'];?></td>
                         <td><?php echo $value['addres'];?></td>
+                        
 
                         <td>
                             <a href=" index.php?page=list&method=destroy&id=<?php echo $value['id']; ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa học viên?');"  class="btn btn-danger">

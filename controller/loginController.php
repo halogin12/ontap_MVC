@@ -36,6 +36,7 @@ class loginController extends loginModel
                 include_once 'view/login.php';
                 break; 
 
+            
             default:
                 # code...
                 break;
