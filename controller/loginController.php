@@ -24,10 +24,10 @@ class loginController extends loginModel
                     $inputPassword = $_POST['inputPassword'];
 
                     if ($this->login->login($inputName,$inputPassword)) {			
-                       /* if ($this->login->checkLogin($inputName)){
-                            
-                        }*/
-                        header('Location: http://localhost/ontap_MVC/admin/index.php');
+                        if ($this->login->checkLogin($inputName)){
+                            header('Location: http://localhost/ontap_MVC/admin/index.php');
+                        }
+                        
                     } else {
                         $message = "Thông tin đăng nhập chưa đúng";
                         echo "<script type='text/javascript'>alert('$message');</script>";

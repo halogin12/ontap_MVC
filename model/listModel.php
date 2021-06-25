@@ -74,9 +74,11 @@ class listModel extends Connect
         $message = "bị trùng rồi kìa";
         echo "<script type='text/javascript'>alert('$message');</script>";
     }
-
-    function checknull()
+    /*
+    function checknull($id)
     {
-        
+        $sql = "SELECT id FROM students WHERE id= $id";
+
     }
+    */
 }
